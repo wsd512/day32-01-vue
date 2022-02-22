@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环</title>
+  <script src="js/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+  <ul>
+    <li v-for="name in names">{{name}}</li>
+  </ul>
+
+  <ul>
+    <li v-for="(name,index) in names">{{name}} {{index}}</li>
+  </ul>
+
+  <ul>
+    <li v-for="p in persons">{{p.name}} {{p.age}}</li>
+  </ul>
+
+  <ul>
+    <li v-for="(value,key) in brand">{{value}} {{key}}</li>
+  </ul>
+
+  <ul>
+    <li v-for="(value,key,index) in brand">{{value}} {{key}} {{index}}</li>
+  </ul>
+
+  <ul>
+    <li v-for="i in 10">{{i}}</li>
+  </ul>
+
+</div>
+
+<script type="text/javascript">
+    new Vue({
+      el:"#app",
+      data:{
+        names:["万思东","刘丽娴","周嶂峰","吴创民"],
+        persons:[
+                {name:"黄哲鹏",age:29},
+                {name:"李曼华",age:29}
+        ],
+        brand:{
+          brandName:"小米",
+          companyName:"加步枪",
+          price:20
+        }
+      }
+    });
+</script>
+
+</body>
+</html>
